@@ -6,4 +6,4 @@ collection: writeup
 entries_layout: list
 ---
 
-Hello, this my personal writeup. Enjoy!~
+Yuuuuu, Biasakan Menuliss *_*
