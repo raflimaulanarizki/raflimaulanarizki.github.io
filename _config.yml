@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-headtitle: M.Raflimaulanarizki
+headtitle: Raflimaulanarizki
 copyright: Kyubaang
-title: (R)-chive.
+title: (Ng)Ulik.
 email: javascript:window.open('mailto:'+['raflimaulanarizki','keemail.me'].join('@'))
 description: 
 baseurl: # the optional subpath of your site, e.g. "/blog"

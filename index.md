@@ -2,7 +2,8 @@
 layout: home
 ---
 
-Hello this my journal, archive note, daily note, and my school note. <br />
+Hello this my journal and archive note. <br />
+"Learning by Doing"
 Find my archived post,
 
 <p>
