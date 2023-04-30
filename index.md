@@ -3,7 +3,7 @@ layout: page
 full_logo: true
 title: 
 subtitle: 
-description: Who Am I
+description:
 sitemap:
   priority: 1.0
 ---
@@ -16,10 +16,9 @@ Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and
 Playing on the physical layer, Data Link, Network, Transport and Application
 
 Devices used, Mikrotik, Cisco, Ubiquiti, Ruijie, Dell Server. 
-<a href="https://github.com/raflimaulanarizki"><img src="https://img.shields.io/github/followers/Kyuubang?style=social" /></a>
+<a href="https://github.com/raflimaulanarizki"><img src="https://img.shields.io/github/followers/Kyuubang?style=social" width="50" height="50" /></a>
 
 
-![python](https://upload.wikimedia.org/wikipedia/commons/3/37/MikroTik_logo.svg)
 <br>
 <br>
 <br>
