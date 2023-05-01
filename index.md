@@ -12,11 +12,11 @@ sitemap:
 </h1>
 <p class="describe-text">HI, Let me introduce myself</p>
 
-<p style="line-height:40px; margin: 20px auto;">
+<p style="line-height:40px; margin: 30px auto;">
 Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and System Administration. <br>
 Playing on the Physical layer, Data Link, Network, Transport and Application
+<a href="https://github.com/raflimaulanarizki"><img src="https://img.shields.io/github/followers/raflimaulanarizki?style=social" style="width: auto;" /></a>
 </p>
-<a href="https://github.com/Kyuubang"><img src="https://img.shields.io/github/followers/Kyuubang?style=social" style="width: auto;" /></a>
 
 <p class="describe-text">Network Devices</p>
 <p>
