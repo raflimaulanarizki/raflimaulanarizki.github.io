@@ -14,7 +14,7 @@ sitemap:
 
 <p style="line-height:40px; margin: 30px auto;">
 Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and System Administration. <br>
-Playing on the Physical layer, Data Link, Network, Transport and Application
+Playing on the Physical layer, Data Link, Network, Transport and Application.<br>
 <a href="https://github.com/raflimaulanarizki"><img src="https://img.shields.io/github/followers/raflimaulanarizki?style=social" style="width: auto;" /></a>
 </p>
 
