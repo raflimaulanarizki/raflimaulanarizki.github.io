@@ -11,14 +11,13 @@ sitemap:
     <div class="page-title__text">Who Am I</div>
 </h1>
 <p class="describe-text">HI, Let me introduce myself</p>
-<br>
 
-<p style="line-height:40px;">
+<p style="line-height:40px; margin: 20px auto;">
 Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and System Administration. <br>
 Playing on the Physical layer, Data Link, Network, Transport and Application
 </p>
+<a href="https://github.com/Kyuubang"><img src="https://img.shields.io/github/followers/Kyuubang?style=social" style="width: auto;" /></a>
 
-<br>
 <p class="describe-text">Network Devices</p>
 <p>
     <img src="https://img.shields.io/badge/-CISCO-informational?logo=cisco&logoColor=white&style=for-the-badge" style="width: auto;" alt="cisco" />
