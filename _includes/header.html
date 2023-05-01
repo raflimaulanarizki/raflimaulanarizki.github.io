@@ -11,9 +11,9 @@
     </div>
     <ul class="social-links">
         {% if site.author.email %}
-        <a href="{{ site.author.email }}" class="social-links__entry" target="_blank"></a>
-        <!-- <a href="mailto:{{ site.author.email }}" class="social-links__entry" target="_blank"> -->
-        <i class="fas fa-envelope-square"></i>
+        <!-- <a href="{{ site.author.email }}" class="social-links__entry" target="_blank"></a> -->
+        <a href="mailto:{{ site.author.email }}" class="social-links__entry" target="_blank">
+            <i class="fas fa-envelope-square"></i>
         </a>
         {% endif %} {% if site.author.github %}
         <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
