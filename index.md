@@ -7,14 +7,18 @@ description: HI, Let me introduce myself
 sitemap:
   priority: 1.0
 ---
-<h1 class="">
+<h1 style="padding-top: 0px;" >
     <div class="page-title__text">Who Am I</div>
 </h1>
-
 <p class="describe-text">HI, Let me introduce myself</p>
+<br>
+
+<p style="line-height:40px;">
 Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and System Administration. <br>
 Playing on the Physical layer, Data Link, Network, Transport and Application
+</p>
 
+<br>
 <p class="describe-text">Network Devices</p>
 <p>
     <img src="https://img.shields.io/badge/-CISCO-informational?logo=cisco&logoColor=white&style=for-the-badge" style="width: auto;" alt="cisco" />
