@@ -17,8 +17,6 @@ Playing on the Physical layer, Data Link, Network, Transport and Application
 
 Devices used, Mikrotik, Cisco, Ubiquiti, Ruijie, Dell Server. 
 
-
-
 <!-- ![python](https://upload.wikimedia.org/wikipedia/commons/3/37/MikroTik_logo.svg) -->
 <br>
 <br>
