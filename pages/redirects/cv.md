@@ -1,4 +1,4 @@
 ---
 permalink: /cv
-redirect_link: {{ site.url }}/cv
+redirect_link: https://raflimaulanarizki.github.io/cv
 ---
