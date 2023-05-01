@@ -7,7 +7,7 @@ description: HI, Let me introduce myself
 sitemap:
   priority: 1.0
 ---
-<h1 class="" style="margin: 30px auto;">
+<h1 class="">
     <div class="page-title__text">Who Am I</div>
 </h1>
 
