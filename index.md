@@ -19,8 +19,10 @@ Playing on the Physical layer, Data Link, Network, Transport and Application
 
 Devices used, Mikrotik, Cisco, Ubiquiti, Ruijie, Dell Server. 
 
-#### Framework
-![django](https://img.shields.io/badge/-DJANGO-brightgreen?logo=django&logoColor=black&style=for-the-badge)
+## Network
+<p>
+    <img src="https://img.shields.io/badge/-CISCO-informational?logo=cisco&logoColor=black&style=for-the-badge" style="width: auto;" alt="cisco" />
+</p>
 
 
 <br>
