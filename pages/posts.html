@@ -1,2 +1,12 @@
---- layout: page title: Posts subtitle: Random thoughts. description: Rafli Maulana Rizki posts page – A minimal yet feature-rich Jekyll theme made for personal websites and blogs. permalink: /posts sitemap: priority: 0.9 --- {% assign posts = site.posts
-%} {% include post/post_loop.html %}
+---
+layout: page
+title: Posts
+subtitle: Random thoughts.
+description: Pudhina Fresh posts page – A minimal yet feature-rich Jekyll theme made for personal websites and blogs.
+permalink: /posts
+sitemap:
+  priority: 0.9
+---
+{% assign posts = site.posts %}
+
+{% include post/post_loop.html %}
