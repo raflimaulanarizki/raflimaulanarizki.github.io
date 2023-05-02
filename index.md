@@ -11,13 +11,12 @@ sitemap:
     <div class="page-title__text">Who Am I</div>
 </h1>
 <p class="describe-text">HI, Let me introduce myself</p>
-x
 Hallo. I'm Rafli, a Junior Network Engineer, Network Automation enthusiasts, and System Administration. <br>
 Playing on the Physical layer, Data Link, Network, Transport and Application.<br>
 <a href="https://github.com/raflimaulanarizki"><img src="https://img.shields.io/github/followers/raflimaulanarizki?style=social" style="width: auto;" /></a>
 <br>
-Look at my <a href="https://raflimaulanarizki.github.io/cv/"> cv </a>or reach me at <a href="https://mailhide.io/e/vhYpVUOr"> email </a> .
-</p>
+Look at my <a href="https://raflimaulanarizki.github.io/cv/"> cv </a>or reach me at <a href="https://mailhide.io/e/vhYpVUOr"> email </a>.
+
 
 <p class="describe-text">Network Devices</p>
 <p>
