@@ -21,7 +21,7 @@ Look at my <a href="https://raflimaulanarizki.github.io/cv/" target="_blank"> cv
 <p class="describe-text">Network Devices</p>
 <p>
     <img src="https://img.shields.io/badge/-CISCO-informational?logo=cisco&logoColor=white&style=for-the-badge" style="width: auto;" alt="cisco" />
-    <img src="https://img.shields.io/badge/-CISCO-informational?logo=juniper&logoColor=white&style=for-the-badge" style="width: auto;" alt="juniper" />
+    <img src="https://img.shields.io/badge/-JUNIPER-green?logo=juniper&logoColor=white&style=for-the-badge" style="width: auto;" alt="juniper" />
     <img src="https://img.shields.io/badge/-UBIQUITI-00c3ff?logo=ubiquiti&logoColor=white&style=for-the-badge" style="width: auto;" alt="ubiquiti" />
     <img src="https://img.shields.io/badge/-MIKROTIK-lightgrey?logo=mikrotik&logoColor=white&style=for-the-badge" style="width: auto;" alt="mikrotik" />
     <img src="https://img.shields.io/badge/-RUIJIE-red?logo=ruijie&logoColor=white&style=for-the-badge" style="width: auto;" alt="ruijie" />
