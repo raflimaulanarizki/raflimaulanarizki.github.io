@@ -1,6 +1,6 @@
 - name: NextCloud Storage Server
   id: nc
-  img_src: /assets/img/nextcloud.pngx
+  img_src: /assets/img/nextcloud.png
   description_less: NextCloud adalah software open-source yang memungkinkan kamu untuk enyimpan data di cloud.
   description_more: >
     <p>Nextcloud ini di buat untuk penyimpanan di salah satu sekolah</p>
