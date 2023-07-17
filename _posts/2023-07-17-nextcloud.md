@@ -7,6 +7,8 @@ tags: system
 splash_img_source: /assets/img/nextcloud.png
 splash_img_caption: nextcloud.com.
 ---
+# NextCloud
+
 NextCloud adalah software open-source yang berfungsi untuk menyimpan data di cloud ataupun local server, dengan NextCloud kamu akan memiliki kendali penuh dimana dan bagaimana file tersebut disimpan. NextCloud bekerja layaknya layanan cloud storage lainnya seperti Dropbox, Google Drive, maupun iCloud.
 
 ### System Requiremen on Project
