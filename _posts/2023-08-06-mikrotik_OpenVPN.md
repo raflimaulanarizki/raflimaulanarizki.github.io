@@ -16,13 +16,13 @@ VPN ini bermacam-macam protokolnya, mulai dari PPTP, L2TP, SSTP, OpenVPN. Tetapi
 ## OpenVPN
 OpenVPN adalah sebuah Software open-source yang berfungsi untuk membuat Virutal Private Network (VPN) yang Secure di atas public network seperti Internet. VPN ini mengenkripsi traffic data antara device yang dimiliki dengan server VPN.
 
-#### Syarat Setting OpenVPN
+##### Syarat Setting OpenVPN
 - Mikrotik
 - IP Public
 - Internet
 
-#### Bagaimana Cara Setting OpenVPN di mikrotik?
-Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasangkan ip public pada router.
+##### Bagaimana Cara Setting OpenVPN di Mikrotik?
+Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasangkan ip public pada router.
 
 ##### Certificate
 - Certificate Generate
@@ -33,10 +33,89 @@ Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasangkan ip 
 [admin@mikrotik] /certificate> add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
 ```
 
+- Certificate Sign
+```sh
+[admin@mikrotik] /certificate> sign ca-template name=ca-certificate
+[admin@mikrotik] /certificate> sign server-template name=server-certificate ca=ca-certificate
+[admin@mikrotik] /certificate> sign client-template name=client-certificate ca=ca-certificate
+```
 
+- Certificate Trust
+```sh
+[admin@mikrotik] /certificate> set ca-certificate trusted=yes
+[admin@mikrotik] /certificate> set server-certificate trusted=yes
+```
 
+- Certificate Export
+```sh
+[admin@mikrotik] /certificate> export-certificate ca-certificate export-passphrase=""
+[admin@mikrotik] /certificate> export-certificate client-certificate export-passphrase="12345678"
+```
 
+- Cek File Export Certificate
+```sh
+[admin@mikrotik] > file print where name~"cert_"
+Columns: NAME, TYPE, SIZE, CREATION-TIME
+#  NAME                                TYPE       SIZE  CREATION-TIME       
+2  cert_export_ca-certificate.crt      .crt file  1107  aug/06/2023 18:41:47
+3  cert_export_client-certificate.crt  .crt file  1139  aug/06/2023 18:41:48
+0  cert_export_client-certificate.key  .key file  1858  aug/06/2023 18:41:48
+```
 
+##### OpenVPN Server di Mikrotik
+- OpenVPN Enable
+```sh
+[admin@mikrotik] > /interface ovpn-server server
+[admin@mikrotik] /interface/ovpn-server/server> set auth=sha1,md5 certificate=server-certificate cipher=blowfish128,aes128,aes192,aes256 enabled=yes require-client-certificate=yes
+```
 
+- OpenVPN user
+```sh
+[admin@mikrotik] > /ppp secret
+[admin@mikrotik] /ppp/secret> add local-address=172.10.1.1 name=testing remote-address=172.10.1.2 password=123
+```
+bisa setting profile juga, tetapi untuk pengetestan saya memakai defautl profile saja.
 
+##### Konfigurasi file .ovpn 
+- Download File 3 file Certificate yang sebelumnya di export
+- Buat file client.ovpn di notepad/notepad++
 
+```sh
+client
+dev tun
+proto tcp
+remote 103.33.13.89 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verb 3
+mute 3
+cipher AES-256-CBC
+auth SHA1
+auth-user-pass
+pull
+auth-nocache
+redirect-gateway def1
+route-method exe
+route-delay 2
+route 172.10.1.0 255.255.255.0 172.10.1.1
+<ca> 
+-----BEGIN CERTIFICATE-----
+#file ca-certificate.crt
+-----END CERTIFICATE-----
+</ca>
+
+<cert> 
+-----BEGIN CERTIFICATE-----
+#file client-certificate.crt
+-----END CERTIFICATE-----
+</cert>
+
+<key> 
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+#file client-certificate.key
+-----END ENCRYPTED PRIVATE KEY-----
+</key>
+```
