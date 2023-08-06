@@ -16,11 +16,22 @@ VPN ini bermacam-macam protokolnya, mulai dari PPTP, L2TP, SSTP, OpenVPN. Tetapi
 ## OpenVPN
 OpenVPN adalah sebuah Software open-source yang berfungsi untuk membuat Virutal Private Network (VPN) yang Secure di atas public network seperti Internet. VPN ini mengenkripsi traffic data antara device yang dimiliki dengan server VPN.
 
-### Syarat Konfigurtasi OpenVPN
+#### Syarat Setting OpenVPN
 - Mikrotik
 - IP Public
 - Internet
 
+#### Bagaimana Cara Setting OpenVPN di mikrotik?
+Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasangkan ip public pada router.
+
+##### Certificate
+- Certificate Generate
+```sh
+[admin@mikrotik] > /certificate/
+[admin@mikrotik] /certificate> add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
+[admin@mikrotik] /certificate> add name=server-template common-name=server days-valid=3650 key-size=2048 key-usage=digital-signature,key-encipherment,tls-server
+[admin@mikrotik] /certificate> add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
+```
 
 
 
