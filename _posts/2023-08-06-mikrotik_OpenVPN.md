@@ -79,7 +79,6 @@ bisa setting profile juga, tetapi untuk pengetestan saya memakai defautl profile
 ##### Konfigurasi file .ovpn 
 - Download File 3 file Certificate yang sebelumnya di export
 - Buat file client.ovpn di notepad/notepad++
-
 ```sh
 client
 dev tun
@@ -119,3 +118,10 @@ route 172.10.1.0 255.255.255.0 172.10.1.1
 -----END ENCRYPTED PRIVATE KEY-----
 </key>
 ```
+
+##### Test VPN
+- Pastikan sudah menginstall OpenVPN pada Laptop/HP
+- Import file client.ovpn kedalam aplikai OpenVPN
+- lalu isi username, password, dan private key
+<br><br>
+![OpenVPN Client](/assets/img/mikrotik-openvpn1.png)
