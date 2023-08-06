@@ -125,3 +125,4 @@ route 172.10.1.0 255.255.255.0 172.10.1.1
 - lalu isi username, password, dan private key
 <br><br>
 ![OpenVPN Client](/assets/img/mikrotik-openvpn1.png)
+<img src="/assets/img/mikrotik-openvpn1.png" alt="OpenVPN Client" width="50%" height="50%">
