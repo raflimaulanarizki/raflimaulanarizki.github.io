@@ -79,6 +79,8 @@ bisa setting profile juga, tetapi untuk pengetestan saya memakai defautl profile
 ##### Konfigurasi file .ovpn 
 - Download File 3 file Certificate yang sebelumnya di export
 - Buat file client.ovpn di notepad/notepad++
+
+
 ```sh
 client
 dev tun
