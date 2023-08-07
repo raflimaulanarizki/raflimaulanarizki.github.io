@@ -6,7 +6,6 @@ pin:
 tags: mikrotik network
 splash_img_source: /assets/img/mikrotik-openvpn.png
 splash_img_caption: 
-comments: true
 ---
 Ada salah satu perusahan, yang mana perusahaan ini memberlakukan pekerjaan untuk karyawannya secara hybrid WFO dan WFA. Setelah itu, perusahaan ini juga memiliki sebuah aplikasi private yang hanya bisa di buka menggunakan network kantor.
 
