@@ -124,6 +124,6 @@ route 172.10.1.0 255.255.255.0 172.10.1.1
 ##### Test VPN
 - Pastikan sudah menginstall OpenVPN pada Laptop/HP
 - Import file client.ovpn kedalam aplikai OpenVPN
-- lalu isi username, password, dan private key
+- lalu isi username, password, dan private key. setelah di isi silahkan di connect ke vpnnya
 <br><br>
 <img src="/assets/img/mikrotik-openvpn1.png" alt="OpenVPN Client" style="width: 40%;">
