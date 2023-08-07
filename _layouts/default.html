@@ -1,24 +1,13 @@
---- layout: compress ---
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    {% include meta_tags/base.html %} {% include externals/styling.html %}
+{% include meta_tags/base.html %}
+{% include externals/styling.html %}
 </head>
-
 <body>
-<<<<<<< HEAD
-    <div class="wrapper">
-        {% include header.html %} {{ content }}
-        <span class="toggle"></span>
-        <span class="wave"></span>
-        <br> {% if page.comments %} {% include post/disqus.html %} {% endif %}
-        <br> {% include page/about.html %}
-    </div>
-</body>
-
-</html>
-=======
 <div class="wrapper">
 {% include header.html %}
 {{ content }}
@@ -34,4 +23,3 @@
 <script id="dsq-count-scr" src="//raflimaulanarizki.disqus.com/count.js" async></script>
 </body>
 </html>
->>>>>>> 7cadaa4dbb8af5dc13411651e6d3585f3a21370d
