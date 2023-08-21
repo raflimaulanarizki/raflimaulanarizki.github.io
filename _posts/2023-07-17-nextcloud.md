@@ -17,3 +17,4 @@ NextCloud adalah software open-source yang berfungsi untuk menyimpan data di clo
 - Disk = 500 Gb
 - Cpu = 4 Core
 
+<<COMINGSOON>>
