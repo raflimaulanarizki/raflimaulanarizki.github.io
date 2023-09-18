@@ -27,7 +27,7 @@ Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasang
 ##### Certificate
 - Certificate Generate
 ```sh
-[admin@mikrotik] > /certificate/
+[admin@mikrotik] > /certificate
 [admin@mikrotik] /certificate> add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
 [admin@mikrotik] /certificate> add name=server-template common-name=server days-valid=3650 key-size=2048 key-usage=digital-signature,key-encipherment,tls-server
 [admin@mikrotik] /certificate> add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
@@ -88,8 +88,6 @@ proto tcp
 remote 103.33.13.89 1194
 resolv-retry infinite
 nobind
-persist-key
-persist-tun
 remote-cert-tls server
 verb 3
 mute 3
@@ -99,9 +97,7 @@ auth-user-pass
 pull
 auth-nocache
 redirect-gateway def1
-route-method exe
-route-delay 2
-route 172.10.1.0 255.255.255.0 172.10.1.1
+
 <ca> 
 -----BEGIN CERTIFICATE-----
 #file ca-certificate.crt
