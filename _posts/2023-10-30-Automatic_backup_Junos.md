@@ -50,12 +50,12 @@ user@host# set event-options policy Backup-Daily_police events Backup-Daily_even
 #Upload/backup config juniper to destination
 user@host# set event-options policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
 ```
-    - Backup-Daily_police : Nama Policy
-    - ftp_server          : Nama Destination, yang akan di create
+- Backup-Daily_police : Nama Policy
+- ftp_server          : Nama Destination, yang akan di create
 
 - ##### Destination
 Note : Harus sudah memiliki FTP Server, untuk user, ip dan path nya bisa di sesuaikan
-```sh
+```bash
 user@host# set event-options destinations ftp_server archive-sites ftp://admin@172.16.10.10/switch/ password test112233
 #or
 user@host# set event-options destinations ftp_server archive-sites ftp://admin:test112233@172.16.10.10/switch/
