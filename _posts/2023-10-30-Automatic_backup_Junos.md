@@ -4,7 +4,7 @@ title: Backup Automatically Junos OS
 date: 2023-10-30
 pin: 
 tags: juniper network
-splash_img_source: /assets/img/mikrotik-openvpn.png
+splash_img_source: /assets/img/Juniper-Automatic_Backup.jpeg
 splash_img_caption: 
 ---
 
