@@ -36,7 +36,7 @@ user@host# set system time-zone Asia/Jakarta #Set Timezone*
 ```bash
 save SW.HOME_13Okt23
 file list
-file copy SW.JUNOS.OPENRACK-13okt ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/
+file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
 ```
 
 ## Set Event-Options
@@ -58,14 +58,14 @@ time-of-day        : Daily event / setiap hari
 set policy Backup-Daily_police events Backup-Daily_event
 set policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
 
-set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-SP226/) password test112233
+set destinations ftp_server archive-sites [ftp://admin@172.16.10.10/switch/](ftp://admin@172.16.10.10/switch/) password test112233
 
 set generate-event Backup-Daily_event time-of-day "13:05:00 +0700"
 
 delete destinations ftp_server archive-sites
-set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/) password test112233
+set destinations ftp_server archive-sites [ftp://admin@172.16.10.10/switch/](ftp://admin@172.16.10.10/switch/) password test112233
 
-set destinations ftp_server archive-sites [ftp://chroot:abc123@202.182.57.52/switch/](ftp://chroot:test112233@202.182.57.52/switch/SW-JUNOS-SP226/)
+set destinations ftp_server archive-sites [ftp://admin:abc123@172.16.10.10/switch/](ftp://admin:test112233@172.16.10.10/switch/)
 
 ```visual-basic
 event-options {
@@ -81,7 +81,7 @@ event-options {
     destinations {
         ftp_server {
             archive-sites {
-                "ftp://chroot@202.182.57.52/switch/SW-JUNOS-OPENRACK/" password "$9$DDkfz9A0Ihr0BeWLXbwHqmP5Fn6ABIcAtEyreW82go"; ## SECRET-DATA
+                "ftp://admin@172.16.10.10/switch/" password "$9$DDkfz9A0Ihr0BeWLXbwHqmP5Fn6ABIcAtEyreW82go"; ## SECRET-DATA
             }
         }
     }
