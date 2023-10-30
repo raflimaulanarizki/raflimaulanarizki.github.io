@@ -33,7 +33,7 @@ file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
 ## Event-Options
 Membuat Scheduler, Action and Destination.
 
-- ##### Generate Event (Schedule) [link](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
+##### Generate Event (Schedule) [link](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
 
 ```sh
 user@host# set event-options generate-event Backup-Daily_event time-of-day "00:00:05 +0700"
@@ -42,7 +42,7 @@ user@host# set event-options generate-event Backup-Daily_event time-of-day "00:0
 - time-of-day        : Daily event / setiap hari
 - "00:00:05 +0700"   : Waktu executed event
 
-- ##### Policy
+ ##### Policy
 Action yang akan dilakukan jika event sudah sesuai dengan yang di jadwalkan
 ```sh
 user@host# set event-options policy Backup-Daily_police events Backup-Daily_event
@@ -53,7 +53,7 @@ user@host# set event-options policy Backup-Daily_police then upload filename /co
 - Backup-Daily_police : Nama Policy
 - ftp_server          : Nama Destination, yang akan di create
 
-- ##### Destination
+ ##### Destination
 Note : Harus sudah memiliki FTP Server, untuk user, ip dan path nya bisa di sesuaikan
 ```bash
 user@host# set event-options destinations ftp_server archive-sites ftp://admin@172.16.10.10/switch/ password test112233
@@ -87,4 +87,5 @@ event-options {
 ```
 
 Reference
-- [supportportal.juniper.net_Junos-How-to-take-configuration-backup-automatically] (https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US)
+- [supportportal.juniper.net_Junos-How-to-take-configuration-backup-automatically](https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US)
+- [link](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
