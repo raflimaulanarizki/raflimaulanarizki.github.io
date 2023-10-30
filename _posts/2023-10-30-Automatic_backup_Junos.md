@@ -8,21 +8,13 @@ splash_img_source: /assets/img/mikrotik-openvpn.png
 splash_img_caption: 
 ---
 
-# Backup Automatically Junos OS
-
-Owner: Muhamad Rafli Maulana Rizki
-Tags: Policies
-Created time: October 13, 2023 1:43 PM
-
 Konfigrasi Backup Automatic menggunakan FTP server, 
-
 sebelumnya saya sudah membuat konfigurasi Backup manual berikut linknya 
 
 ## Set Clock
-
 Pastikan Waktu sudah sesuai, karena format file menggunakan Tanggal dan waktu.
 
-```visual-basic
+```bash
 #show time 
 *user@host> show system uptime 
 user@host# set system time-zone Asia/Jakarta #Set Timezone*
@@ -45,9 +37,9 @@ Membuat Scheduler, Action and Destination.
 
 ### Generate Event
 
-Create Schedule (Event), [https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
+Create Schedule (Event), [test](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
 
-```visual-basic
+```bash
 *user@host#* set event-options generate-event Backup-Daily_event time-of-day "00:00:05 +0700"
 #Command
 *Backup-Daily_event* : Nama Event
@@ -67,7 +59,7 @@ set destinations ftp_server archive-sites [ftp://admin@172.16.10.10/switch/](ftp
 
 set destinations ftp_server archive-sites [ftp://admin:abc123@172.16.10.10/switch/](ftp://admin:test112233@172.16.10.10/switch/)
 
-```visual-basic
+```bash
 event-options {
     generate-event {
         Backup-Daily_event time-of-day "00:00:10 +0700";
