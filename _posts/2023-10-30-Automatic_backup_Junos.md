@@ -50,8 +50,8 @@ user@host# set event-options policy Backup-Daily_police events Backup-Daily_even
 #Upload/backup config juniper to destination
 user@host# set event-options policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
 ```
-- Backup-Daily_police : Nama Policy
-- ftp_server          : Nama Destination, yang akan di create
+    - Backup-Daily_police : Nama Policy
+    - ftp_server          : Nama Destination, yang akan di create
 
 - ##### Destination
 Note : Harus sudah memiliki FTP Server, untuk user, ip dan path nya bisa di sesuaikan
@@ -87,4 +87,4 @@ event-options {
 ```
 
 Reference
-- [https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US] (https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US)
+- [supportportal.juniper.net_Junos-How-to-take-configuration-backup-automatically] (https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US)
