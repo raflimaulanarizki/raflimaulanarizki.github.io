@@ -22,7 +22,6 @@ user@host# set system time-zone Asia/Jakarta #Set Timezone*
 #jika belum sesuai, bisa di set manual.
 user@host> set date 202310131309* 
 ```
-
 ## Backup Manual
 
 ```bash
@@ -31,34 +30,41 @@ file list
 file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
 ```
 
-## Set Event-Options
-
+## Event-Options
 Membuat Scheduler, Action and Destination.
 
-### Generate Event
+##### Generate Event (Schedule) [link](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
 
-Create Schedule (Event), [test](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
-
-```bash
+```sh
 user@host# set event-options generate-event Backup-Daily_event time-of-day "00:00:05 +0700"
-#Command
-Backup-Daily_event : Nama Event
-time-of-day        : Daily event / setiap hari
-"00:00:05 +0700"   : Waktu executed event
 ```
+- Backup-Daily_event : Nama Event
+- time-of-day        : Daily event / setiap hari
+- "00:00:05 +0700"   : Waktu executed event
 
-set policy Backup-Daily_police events Backup-Daily_event
-set policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
+##### Policy
+Action yang akan dilakukan jika event sudah sesuai dengan yang di jadwalkan
+```sh
+user@host# set event-options policy Backup-Daily_police events Backup-Daily_event
 
-set destinations ftp_server archive-sites [ftp://admin@172.16.10.10/switch/](ftp://admin@172.16.10.10/switch/) password test112233
+#Upload/backup config juniper to destination
+user@host# set event-options policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
+```
+- Backup-Daily_police : Nama Policy
+- ftp_server          : Nama Destination, yang akan di create
 
-set generate-event Backup-Daily_event time-of-day "13:05:00 +0700"
+##### Destination
+Note : Harus sudah memiliki FTP Server, untuk user, ip dan path nya bisa di sesuaikan
+```sh
+user@host# set event-options destinations ftp_server archive-sites ftp://admin@172.16.10.10/switch/ password test112233
+#or
+user@host# set event-options destinations ftp_server archive-sites ftp://admin:test112233@172.16.10.10/switch/
+```
+- ftp_server : Nama Destination
 
-delete destinations ftp_server archive-sites
-set destinations ftp_server archive-sites [ftp://admin@172.16.10.10/switch/](ftp://admin@172.16.10.10/switch/) password test112233
+Note: Commit Configuration
 
-set destinations ftp_server archive-sites [ftp://admin:abc123@172.16.10.10/switch/](ftp://admin:test112233@172.16.10.10/switch/)
-
+## Configuration Results
 ```bash
 event-options {
     generate-event {
@@ -73,9 +79,12 @@ event-options {
     destinations {
         ftp_server {
             archive-sites {
-                "ftp://admin@172.16.10.10/switch/" password "$9$DDkfz9A0Ihr0BeWLXbwHqmP5Fn6ABIcAtEyreW82go"; ## SECRET-DATA
+                "ftp://admin@172.16.10.10/switch/" password "$9$SDFASDdfsdfsdfSDsfsdFSDd"; ## SECRET-DATA
             }
         }
     }
 }
 ```
+
+Reference
+- https://supportportal.juniper.net/s/article/Junos-How-to-take-configuration-backup-automatically?language=en_US
