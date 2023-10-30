@@ -65,7 +65,7 @@ set generate-event Backup-Daily_event time-of-day "13:05:00 +0700"
 delete destinations ftp_server archive-sites
 set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/) password test112233
 
-set destinations ftp_server archive-sites [ftp://chroot:abc123@202.182.57.52/switch/](ftp://chroot:susujandam4h4L@202.182.57.52/switch/SW-JUNOS-SP226/)
+set destinations ftp_server archive-sites [ftp://chroot:abc123@202.182.57.52/switch/](ftp://chroot:test112233@202.182.57.52/switch/SW-JUNOS-SP226/)
 
 ```visual-basic
 event-options {
