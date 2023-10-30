@@ -22,7 +22,7 @@ user@host# set system time-zone Asia/Jakarta #Set Timezone*
 #jika belum sesuai, bisa di set manual.
 user@host> set date 202310131309* 
 ```
-## Backup Manual
+## <b>Backup Manual</b>
 
 ```bash
 save SW.HOME_13Okt23
