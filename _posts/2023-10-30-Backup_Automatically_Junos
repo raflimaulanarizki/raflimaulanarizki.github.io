@@ -58,12 +58,12 @@ time-of-day        : Daily event / setiap hari
 set policy Backup-Daily_police events Backup-Daily_event
 set policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
 
-set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-SP226/) password 123abc
+set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-SP226/) password test112233
 
 set generate-event Backup-Daily_event time-of-day "13:05:00 +0700"
 
 delete destinations ftp_server archive-sites
-set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/) password susujandam4h4L
+set destinations ftp_server archive-sites [ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/](ftp://chroot@202.182.57.52/switch/SW-JUNOS-MMR-APJII/) password test112233
 
 set destinations ftp_server archive-sites [ftp://chroot:abc123@202.182.57.52/switch/](ftp://chroot:susujandam4h4L@202.182.57.52/switch/SW-JUNOS-SP226/)
 
