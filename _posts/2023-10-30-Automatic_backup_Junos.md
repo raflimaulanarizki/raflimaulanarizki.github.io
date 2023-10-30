@@ -16,11 +16,11 @@ Pastikan Waktu sudah sesuai, karena format file menggunakan Tanggal dan waktu.
 
 ```bash
 #show time 
-*user@host> show system uptime 
+user@host> show system uptime 
 user@host# set system time-zone Asia/Jakarta #Set Timezone*
 
 #jika belum sesuai, bisa di set manual.
-*user@host> set date 202310131309* 
+user@host> set date 202310131309* 
 ```
 
 ## Backup Manual
@@ -40,9 +40,9 @@ Membuat Scheduler, Action and Destination.
 Create Schedule (Event), [test](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
 
 ```bash
-*user@host#* set event-options generate-event Backup-Daily_event time-of-day "00:00:05 +0700"
+user@host# set event-options generate-event Backup-Daily_event time-of-day "00:00:05 +0700"
 #Command
-*Backup-Daily_event* : Nama Event
+Backup-Daily_event : Nama Event
 time-of-day        : Daily event / setiap hari
 "00:00:05 +0700"   : Waktu executed event
 ```
