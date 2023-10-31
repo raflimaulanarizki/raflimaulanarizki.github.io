@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mikrotik - OpenVPN
+title: OpenVPN - Mikrotik
 date: 2023-08-06
 pin: 
 tags: mikrotik network

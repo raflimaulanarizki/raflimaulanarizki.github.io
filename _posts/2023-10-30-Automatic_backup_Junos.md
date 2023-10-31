@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Backup Automatically Junos OS
+title: Manually and Automatically Backup - Juniper
 date: 2023-10-30
 pin: 
 tags: juniper network
@@ -8,8 +8,7 @@ splash_img_source: /assets/img/Juniper-Automatic_Backup.jpeg
 splash_img_caption: 
 ---
 
-Konfigrasi Backup Automatic menggunakan FTP server, 
-sebelumnya saya sudah membuat konfigurasi Backup manual berikut linknya 
+Konfigrasi Backup Otomatis dan Manual menggunakan FTP server, 
 
 ## Set Clock
 Pastikan Waktu sudah sesuai, karena format file menggunakan Tanggal dan waktu.
@@ -22,16 +21,22 @@ user@host# set system time-zone Asia/Jakarta #Set Timezone*
 #jika belum sesuai, bisa di set manual.
 user@host> set date 202310131309* 
 ```
-## Backup Manual
-
+# Manual Backup
 ```bash
-save SW.HOME_13Okt23
-file list
-file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
+#Backup Configuration Juniper
+user@host# save SW.HOME_13Okt23
+
+#Cek File
+user@host> file list
+
+#Upload File to FTP Server
+user@host> file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
 ```
 
+# Automatic Backup
+
 ## Event-Options
-Membuat Scheduler, Action and Destination.
+Create Scheduler (Action), Action (Policy) and Destination.
 
 ##### <b>Generate Event</b> (Schedule) [link](https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/ref/statement/generate-event-edit-event-options.html)
 
@@ -46,7 +51,6 @@ user@host# set event-options generate-event Backup-Daily_event time-of-day "00:0
 Action yang akan dilakukan jika event sudah sesuai dengan yang di jadwalkan
 ```sh
 user@host# set event-options policy Backup-Daily_police events Backup-Daily_event
-
 #Upload/backup config juniper to destination
 user@host# set event-options policy Backup-Daily_police then upload filename /config/juniper.conf.gz destination ftp_server
 ```
