@@ -25,6 +25,7 @@ user@host> set date 202310131309*
 ```bash
 #Backup Configuration Juniper
 user@host# save SW.HOME_13Okt23
+user@host# commit
 
 #Cek File
 user@host> file list
