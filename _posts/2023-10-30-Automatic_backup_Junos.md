@@ -21,7 +21,7 @@ user@host# set system time-zone Asia/Jakarta #Set Timezone*
 #jika belum sesuai, bisa di set manual.
 user@host> set date 202310131309* 
 ```
-# Manual Backup
+# 1. Manual Backup
 ```bash
 #Backup Configuration Juniper
 user@host# save SW.HOME_13Okt23
@@ -34,7 +34,7 @@ user@host> file list
 user@host> file copy SW.JUNOS.13okt ftp://admin@172.16.10.10/switch/
 ```
 
-# Automatic Backup
+# 2. Automatic Backup
 
 ## Event-Options
 Create Scheduler (Action), Action (Policy) and Destination.
