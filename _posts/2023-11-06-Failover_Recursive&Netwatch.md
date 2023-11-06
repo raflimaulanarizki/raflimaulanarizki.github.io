@@ -91,10 +91,12 @@ Setting network dari topologi diatas.
     Timeout : Timeout Hosts. 
 
     <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch2.png" alt="netwatch2" style="width: 60%;">
+
     ⇒ Set disable route dengan comment “Utama” <br>
     Otomatis Route backup akan menerusakan traffic internet jika status DOWN.
     
     <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch3.png" alt="netwatch3" style="width: 60%;">
+    
     ⇒ Set enable route dengan comment “Utama” <br>    
     Route Utama akan kembali menerusakan traffic internet jika status UP.
     
