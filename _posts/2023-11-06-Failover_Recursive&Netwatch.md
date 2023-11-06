@@ -96,8 +96,8 @@ Setting network dari topologi diatas.
     Otomatis Route backup akan menerusakan traffic internet jika status DOWN.
     
     <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch3.png" alt="netwatch3" style="width: 60%;">
-    
-    ⇒ Set enable route dengan comment “Utama” <br>    
+
+    ⇒ Set enable route dengan comment “Utama” <br>
     Route Utama akan kembali menerusakan traffic internet jika status UP.
     
 
