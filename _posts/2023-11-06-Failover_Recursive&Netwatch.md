@@ -84,10 +84,11 @@ Setting network dari topologi diatas.
     
 3. Set Configure Netwatch
     
-    <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch1.png" alt="netwatch1" style="width: 40%;">
+    <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch1.png" alt="netwatch1" style="width: 50%; display: block; margin-left: auto margin-right: auto;">
+    
     Hosts : IP Internet yang di monitoring <br>
     Interval : Berapa lama untuk menentukan down atau tidaknya, set ke 5 sektiar (3-5 detik) <br>
-    Timeout : Timeout Hosts. <br>
+    Timeout : Timeout Hosts. 
 
     ![netwatch2.png](/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch2.png)
     ⇒ Set disable route dengan comment “Utama” 
