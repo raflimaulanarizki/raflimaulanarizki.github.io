@@ -114,9 +114,8 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
             Jika bandwidth berbeda, maka Bandwidth yang lebih besar harus di bagi untuk menyamakan rule dengan bandwidth yang kecil.
             
         
-        ### Configuration Firewall Mangel
-        
-        <img src="/assets/img/mikrotik-openvpn1.png" alt="OpenVPN Client" style="width: 40%;">
+    4. Configuration Firewall Mangel
+        ![confpcc.png](/assets/img/pcc-mikrotik/confpcc.png)
         
 5. Create IP Route Network <br>
     ⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
