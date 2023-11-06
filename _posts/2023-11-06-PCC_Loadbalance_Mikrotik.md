@@ -36,8 +36,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     ```
     
 3. Create address list  (LAN) Network Local
-
-⇒ list network local yang akan di load balance.
+    ⇒ list network local yang akan di load balance.
     
     ```bash
     /ip firewall address-list
@@ -46,7 +45,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     ```
     
 4. Setting Mangle
-    1. Rule (Accept) koneksi antar local network 
+    1. Rule (Accept) koneksi antar local network <br>
     ⇒ Berfungsi agar network yang ingin berkomunikasi antar network local **tidak melalui proses filter koneksi PCC**. 
     Jika tidak dibuatkan rule accept, maka **semua network** akan **melalui proses PCC** terlebih dahulu, itu **dapat mempengaruhi traffic** local.
         
@@ -132,6 +131,6 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     ```
     
 6. Configuration Complete,
-⇒ Untuk melihat berhasil atau tidak, bisa dilihat dari rule mangel apakah ********************************Packet dan Bytes******************************** bertambah dan lihat traffic pada kedua ISP di bagi dua atau tidak pada saat ********************SPEEDTEST.********************
+⇒ Untuk melihat berhasil atau tidak, bisa dilihat dari rule mangel apakah **Packet dan Bytes** bertambah dan lihat traffic pada kedua ISP di bagi dua atau tidak pada saat **SPEEDTEST.**
 
 ## Thank You
