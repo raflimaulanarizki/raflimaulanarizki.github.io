@@ -116,7 +116,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
         
         ### Configuration Firewall Mangel
         
-            ![confpcc.png](/assets/img/pcc-mikrotik/confpcc.png)
+        <img src="/assets/img/mikrotik-openvpn1.png" alt="OpenVPN Client" style="width: 40%;">
         
 5. Create IP Route Network <br>
     ⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
