@@ -3,7 +3,7 @@ layout: post
 title: Failover Recursive & Netwatch - Mikrotik
 date: 2023-11-06
 pin: 
-tags: system
+tags: mikrotik network
 splash_img_source: /assets/img/2023-11-06-Failover_Recursive&Netwatch/topo.png
 splash_img_caption:
 ---
@@ -84,19 +84,17 @@ Setting network dari topologi diatas.
     
 3. Set Configure Netwatch
     
-    ![netwatch1.png](/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch1.png)
-    Hosts : IP Internet yang di monitoring
+    <img src="/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch1.png" alt="netwatch1" style="width: 40%;">
+    Hosts : IP Internet yang di monitoring <br>
+    Interval : Berapa lama untuk menentukan down atau tidaknya, set ke 5 sektiar (3-5 detik) <br>
+    Timeout : Timeout Hosts. <br>
 
     ![netwatch2.png](/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch2.png)
-    Interval : Berapa lama untuk menentukan down atau tidaknya, set ke 5 sektiar (3-5 detik)
-
-    ![netwatch3.png](/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch3.png)
-    Timeout : Timeout Hosts.
-    
     ⇒ Set disable route dengan comment “Utama” 
     
     Otomatis Route backup akan menerusakan traffic internet jika status DOWN.
     
+    ![netwatch3.png](/assets/img/2023-11-06-Failover_Recursive&Netwatch/netwatch3.png)
     ⇒ Set enable route dengan comment “Utama” 
     
     Route Utama akan kembali menerusakan traffic internet jika status UP.
