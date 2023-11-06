@@ -27,29 +27,32 @@ Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasang
 ##### Certificate
 - Certificate Generate
 ```sh
-[admin@mikrotik] > /certificate
-[admin@mikrotik] /certificate> add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
-[admin@mikrotik] /certificate> add name=server-template common-name=server days-valid=3650 key-size=2048 key-usage=digital-signature,key-encipherment,tls-server
-[admin@mikrotik] /certificate> add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
+/certificate
+add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
+add name=server-template common-name=server days-valid=3650 key-size=2048 key-usage=digital-signature,key-encipherment,tls-server
+add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
 ```
 
 - Certificate Sign
 ```sh
-[admin@mikrotik] /certificate> sign ca-template name=ca-certificate
-[admin@mikrotik] /certificate> sign server-template name=server-certificate ca=ca-certificate
-[admin@mikrotik] /certificate> sign client-template name=client-certificate ca=ca-certificate
+/certificate
+sign ca-template name=ca-certificate
+sign server-template name=server-certificate ca=ca-certificate
+sign client-template name=client-certificate ca=ca-certificate
 ```
 
 - Certificate Trust
 ```sh
-[admin@mikrotik] /certificate> set ca-certificate trusted=yes
-[admin@mikrotik] /certificate> set server-certificate trusted=yes
+/certificate
+set ca-certificate trusted=yes
+set server-certificate trusted=yes
 ```
 
 - Certificate Export
 ```sh
-[admin@mikrotik] /certificate> export-certificate ca-certificate export-passphrase=""
-[admin@mikrotik] /certificate> export-certificate client-certificate export-passphrase="12345678"
+/certificate
+export-certificate ca-certificate export-passphrase=""
+export-certificate client-certificate export-passphrase="12345678"
 ```
 
 - Cek File Export Certificate
@@ -65,14 +68,14 @@ Columns: NAME, TYPE, SIZE, CREATION-TIME
 ##### OpenVPN Server di Mikrotik
 - OpenVPN Enable
 ```sh
-[admin@mikrotik] > /interface ovpn-server server
-[admin@mikrotik] /interface/ovpn-server/server> set auth=sha1,md5 certificate=server-certificate cipher=blowfish128,aes128,aes192,aes256 enabled=yes require-client-certificate=yes
+/interface ovpn-server server
+set auth=sha1,md5 certificate=server-certificate cipher=blowfish128,aes128,aes192,aes256 enabled=yes require-client-certificate=yes
 ```
 
 - OpenVPN user
 ```sh
-[admin@mikrotik] > /ppp secret
-[admin@mikrotik] /ppp/secret> add local-address=172.10.1.1 name=testing remote-address=172.10.1.2 password=123
+/ppp secret
+add local-address=172.10.1.1 name=testing remote-address=172.10.1.2 password=123
 ```
 bisa setting profile juga, tetapi untuk pengetestan saya memakai defautl profile saja.
 

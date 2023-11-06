@@ -19,7 +19,6 @@ PCC Bekerja dengan memecah traffic data yang melewati router kedalam beberapa st
 ### Soal PCC
 
 Sebuah perusahaan dengan topologi di atas memiliki internet dari 2 ISP dengan **bandwidth yang sama**, Perusahaan ini ingin kedua ISP tersebut dipakai sebagai Load Balance dan juga sebagai Backup jika salah satu ISP bermasalah. 
-
 Perusahaan ini juga ingin kedua Link Internet dapat digunakan secara bersamaan dan dibagi secara otomatis.
 
 Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backup Fail Over. 
@@ -35,7 +34,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     add action=masquerade chain=srcnat comment="to;ISP-2" out-interface=ether2-ISP2
     ```
     
-3. Create address list  (LAN) Network Local
+3. Create address list  (LAN) Network Local <br>
     ⇒ list network local yang akan di load balance.
     
     ```bash
@@ -54,7 +53,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
         add action=accept chain=prerouting dst-address-list=LAN
         ```
         
-    2. Rule Traffic Input Output
+    2. Rule Traffic Input Output <br>
     ⇒ Berfungsi untuk memastikan traffic masuk maupun keluar berada pada jalur/route yang sama.
         
         ```bash
@@ -74,7 +73,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
         
         Note: Jika **“in-interface”** adalah PPPoE maka select **PPPoE client Interface** tidak Port Mikrotiknya
         
-    3. Rule Load Balance 2 ISP, Bandwidth sama
+    3. Rule Load Balance 2 ISP, Bandwidth sama <br>
     ⇒ Berfungsi untuk **membagi atau menyeimbangkan** traffic, kedua ISP akan bekerja secara bersamaan dan membagi tugas. Load Balance juga meminimalisir akan terjadinya **Overload traffic** pada salah satu ISP. 
         
         ```bash
@@ -117,10 +116,10 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
         
         ### Configuration Firewall Mangel
         
-        ![Untitled](/assets/img/pcc-mikrotik/confpcc.png)
+        ![confpcc.png](/assets/img/pcc-mikrotik/confpcc.png)
         
-5. Create IP Route Network
-⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
+5. Create IP Route Network <br>
+    ⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
     
     ```bash
     /ip route
@@ -130,7 +129,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     add distance=2 gateway=172.16.2.1
     ```
     
-6. Configuration Complete,
+6. Configuration Complete, <br>
 ⇒ Untuk melihat berhasil atau tidak, bisa dilihat dari rule mangel apakah **Packet dan Bytes** bertambah dan lihat traffic pada kedua ISP di bagi dua atau tidak pada saat **SPEEDTEST.**
 
 ## Thank You
