@@ -103,20 +103,20 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
             
             Tiknik PCC ini menggunakan algoritma Connection splitting untuk melakukan load balance.
             
-            ![Re (1).png](PCC%20Load%20Balance%20-%20Mikrotik%2002519ea386a14e0d9bc5fa9dfcc46517/Re_(1).png)
+            ![pcc.png](/assets/img/pcc-mikrotik/pcc.png)
             
             - Divisor (pembagi) : nilai yang menentukan berapa banyak jalur untuk membagi traffic. Contoh: jika ada 2 ISP (bandwidh sama) maka Divisor 2.
             - Remainder (Sisa) : hasil operasi pembagian traffic (Sequence number), jika Divisor nya 2, maka akan mendapatkan Sisa 0 dan 1.
         - PCC dengan **Bandwidth Berbeda**
             
-            ![Untitled](PCC%20Load%20Balance%20-%20Mikrotik%2002519ea386a14e0d9bc5fa9dfcc46517/Untitled%201.png)
+            ![topo2](/assets/img/pcc-mikrotik/topo2.png)
             
             Jika bandwidth berbeda, maka Bandwidth yang lebih besar harus di bagi untuk menyamakan rule dengan bandwidth yang kecil.
             
         
         ### Configuration Firewall Mangel
         
-        ![confpcc.png](/assets/img/pcc-mikrotik/confpcc.png)
+            ![confpcc.png](/assets/img/pcc-mikrotik/confpcc.png)
         
 5. Create IP Route Network <br>
     ⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
