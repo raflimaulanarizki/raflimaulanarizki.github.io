@@ -8,12 +8,6 @@ splash_img_source: /assets/img/pcc-mikrotik/topo1.png
 splash_img_caption: 
 ---
 
-# PCC Load Balance - Mikrotik
-
-Owner: Muhamad Rafli Maulana Rizki
-Tags: Policies
-Created time: October 31, 2023 6:55 PM
-
 Load Balance adalah metode untuk membagi traffic ke 2 jalur atau lebih. pembagian traffic ini dilakukan secara balance agar traffic berjalan optimal dan bandwidth dari ISP bisa dimaksimalkan.
 
 Load Balance ini juga dapat **menghindari Overload** pada salah satu jalur dan dapat menjadi **backup** jika ada Jalur down/bermasalah.
@@ -24,9 +18,7 @@ PCC Bekerja dengan memecah traffic data yang melewati router kedalam beberapa st
 
 ### Soal PCC
 
-![Untitled](PCC%20Load%20Balance%20-%20Mikrotik%2002519ea386a14e0d9bc5fa9dfcc46517/Untitled.png)
-
-Sebuah perusahaan memiliki internet dari 2 ISP dengan **bandwidth yang sama**, Perusahaan ini ingin kedua ISP tersebut dipakai sebagai Load Balance dan juga sebagai Backup jika salah satu ISP bermasalah. 
+Sebuah perusahaan dengan topologi di atas memiliki internet dari 2 ISP dengan **bandwidth yang sama**, Perusahaan ini ingin kedua ISP tersebut dipakai sebagai Load Balance dan juga sebagai Backup jika salah satu ISP bermasalah. 
 
 Perusahaan ini juga ingin kedua Link Internet dapat digunakan secara bersamaan dan dibagi secara otomatis.
 
@@ -44,6 +36,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
     ```
     
 3. Create address list  (LAN) Network Local
+
 ⇒ list network local yang akan di load balance.
     
     ```bash
@@ -125,7 +118,7 @@ Berikan konfigurasi dari topologi di atas menggunakan Load Balance PCC dan backu
         
         ### Configuration Firewall Mangel
         
-        ![Untitled](PCC%20Load%20Balance%20-%20Mikrotik%2002519ea386a14e0d9bc5fa9dfcc46517/Untitled%202.png)
+        ![Untitled](/assets/img/pcc-mikrotik/confpcc.png)
         
 5. Create IP Route Network
 ⇒ Berfungsi untuk merutekan Rule yang telah di buat dengan set “Routing-mark” pada routing table tersebut.
