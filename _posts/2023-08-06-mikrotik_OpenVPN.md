@@ -26,7 +26,7 @@ Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasang
 
 ##### Certificate
 - Certificate Generate <br>
-⇒ Test2
+⇒ Membuat certificate template yang berisikan informasi kadaluarsa certificatenya, informasi alamat, dan encryption algorithm. Kenapa disebut template karena pada saat sudah di Sign (tanda tangan) maka informasi atau lainnya tidak dapat di ubah. 
 ```sh
 /certificate
 add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
@@ -34,7 +34,8 @@ add name=server-template common-name=server days-valid=3650 key-size=2048 key-us
 add name=client-template common-name=client days-valid=3650 key-size=2048 key-usage=tls-client
 ```
 
-- Certificate Sign
+- Certificate Sign <br>
+⇒ Berfungsi untuk memastikan bahwa certificate ini dikeluarkan atau di tanda tangani (sign) dengan sah oleh sumber yang terpercaya. Sign ini betul certificate tersebut di keluarkan oleh sumbernya, tetapi belum sah untuk sistemnya. 
 ```sh
 /certificate
 sign ca-template name=ca-certificate
@@ -42,7 +43,8 @@ sign server-template name=server-certificate ca=ca-certificate
 sign client-template name=client-certificate ca=ca-certificate
 ```
 
-- Certificate Trust
+- Certificate Trust <br>
+⇒ Proses kepercayaan (trust) certificate untuk memastikan bahwa sistem akan menerima certificate sebagai certificate sah. 
 ```sh
 /certificate
 set ca-certificate trusted=yes
