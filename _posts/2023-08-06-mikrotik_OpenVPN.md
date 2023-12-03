@@ -25,7 +25,7 @@ OpenVPN adalah sebuah Software open-source yang berfungsi untuk membuat Virutal 
 Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasangkan ip public pada router.
 
 ##### Certificate
-- Certificate Generate
+- Certificate Generate <br>
 ⇒ Test2
 ```sh
 /certificate
