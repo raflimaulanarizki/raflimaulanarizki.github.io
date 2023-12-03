@@ -89,16 +89,12 @@ client
 dev tun
 proto tcp
 remote 103.33.13.89 1194
-resolv-retry infinite
 nobind
 remote-cert-tls server
 verb 3
-mute 3
 cipher AES-256-CBC
 auth SHA1
 auth-user-pass
-pull
-auth-nocache
 redirect-gateway def1
 
 <ca> 
