@@ -26,6 +26,7 @@ Note : Pastikan Mikrotik sudah di setting basic configuration dan sudah dipasang
 
 ##### Certificate
 - Certificate Generate
+⇒ Test2
 ```sh
 /certificate
 add name=ca-template common-name=ca days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
